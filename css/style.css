@@ -1,0 +1,215 @@
+/* Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: #D9D9D9;
+}
+
+.image-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.5em;
+    line-height: 1.4;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.less-strong {
+    font-weight: 500;
+}
+
+.mag-side {
+    padding: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+/* header */
+header {
+    background: url(../images/Mask\ group.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Calistoga', cursive;
+    color: #FFF;
+    text-shadow: 0px 1px 2px 0px #648a87;
+    font-size: 4em;
+    margin-bottom: .8rem;
+}
+
+header .dopdown--searchBox {
+    box-shadow: 0px 10px 20px 0px rgb(57, 60, 58);
+    display: inline;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#myDropdown {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 20px;
+
+    cursor: pointer;
+    border: none;
+    padding: .2rem;
+    height: 2rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: 1px solid black;
+
+    padding-left: .5rem;
+}
+
+#myDropdown:focus+.arrow {
+    top: -3%;
+    rotate: 180deg;
+}
+
+.dropdown-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.dropdown-wrapper .arrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+header .searchBox {
+    display: inline;
+    margin-left: -5px;
+}
+
+header .searchBox input {
+    width: 22rem;
+    height: 2rem;
+    border: none;
+    padding: .3rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* main */
+main {
+    width: 80%;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+
+main section {
+    background-color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+section .top img {
+    border-radius: 50%;
+}
+
+section .top .name {
+    font-size: 1.25em;
+    font-weight: 700
+}
+
+section .top .title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+section .bio {
+    text-align: left;
+    font-size: 0.9375em;
+    margin: 1rem 0;
+}
+
+section .bio p{
+    margin-bottom: .8rem;
+}
+
+section .social{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+section .social a{
+    margin: 0 .8rem;
+}
+
+section .social i{
+    scale: 1.5;
+    transition: all .5s;
+}
+
+section .social .fa-twitter:hover{
+    color: rgb(68, 168, 198);
+}
+
+section .social .fa-linkedin:hover{
+    color: rgb(16, 127, 161);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    /* header */
+    header h1 {
+        font-size: 3em;
+    }
+
+    header .searchBox input {
+        width: 15rem;
+    }
+}
