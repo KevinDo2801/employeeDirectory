@@ -104,7 +104,7 @@ header .dopdown--searchBox {
 
 #myDropdown:focus+.arrow {
     top: -3%;
-    rotate: 180deg;
+    transform: rotate(180deg);
 }
 
 .dropdown-wrapper::after {
